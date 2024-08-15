@@ -31,5 +31,5 @@ function CategoryPage() {
     </div>
   );
 }
-//1:23
+
 export default CategoryPage;
