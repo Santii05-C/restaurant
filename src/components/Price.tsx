@@ -68,4 +68,3 @@ const Price = ({ price, id, options }: Props) => {
 };
 
 export default Price;
-//1:40
