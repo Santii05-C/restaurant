@@ -1,3 +1,4 @@
+import Price from "@/components/Price";
 import { singleProduct } from "@/data";
 import Image from "next/image";
 import React from "react";
@@ -8,13 +9,23 @@ const SingleProductPage = () => {
       {/* IMAGE CONTAINER */}
       {singleProduct.img && (
         <div className="relative">
-          <Image src={singleProduct.img} alt="" className="object-contain" />
+          <Image
+            src={singleProduct.img}
+            alt=""
+            className="object-contain"
+            fill
+          />
         </div>
       )}
       {/* TEXT CONTAINER */}
       <div className="">
         <h1 className="">{singleProduct.title}</h1>
         <p className="">{singleProduct.desc}</p>
+        <Price
+          price={singleProduct.price}
+          id={singleProduct.id}
+          options={singleProduct.options}
+        />
       </div>
     </div>
   );
